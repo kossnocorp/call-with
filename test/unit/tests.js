@@ -50,4 +50,10 @@ $(function() {
   test('should define local string variables from object', function() {
     equal(funReturnsCString.callWith(null, cString), 'Hello cruel world!');
   });
+
+  var funMultiplyArguments = function (a, b) { return a + b; };
+
+  test('should pass arguments', function() {
+    equal(funMultiplyArguments.callWith(null, null, [1, 2]), 3);
+  });
 });
