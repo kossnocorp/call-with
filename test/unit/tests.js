@@ -83,5 +83,10 @@ $(function() {
         object.b = 2;
 
         equal(forkedFun(), 3);
+
+        object.a = 40;
+        object.b = 2;
+
+        equal(forkedFun(), 42);
     });
 });
