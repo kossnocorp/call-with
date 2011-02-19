@@ -56,4 +56,32 @@ $(function() {
   test('should pass arguments', function() {
     equal(funMultiplyArguments.callWith(null, null, [1, 2]), 3);
   });
+
+    ////// forkWith spec
+
+    test('any function should respond to forkWith', function() {
+        equal(
+            (function() {}).forkWith.constructor,
+            Function
+        );
+    });
+
+    //
+
+    test('should fork function with local variables', function () {
+        var originFun,
+            object = {},
+            forkedFun;
+
+        originFun = function () {
+            return(a + b);
+        };
+
+        forkedFun = originFun.forkWith(null, object);
+
+        object.a = 1;
+        object.b = 2;
+
+        equal(forkedFun(), 3);
+    });
 });
