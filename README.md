@@ -4,7 +4,7 @@ Crazy shit.
 
 ``` js
 a;
-//=> ReferenceError: a is not defined
+//=> ReferenceError: b is not defined
 
 b;
 //=> ReferenceError: a is not defined
