@@ -4,10 +4,10 @@ Crazy shit.
 
 ``` js
 a;
-//=> ReferenceError: b is not defined
+//=> ReferenceError: a is not defined
 
 b;
-//=> ReferenceError: a is not defined
+//=> ReferenceError: b is not defined
 
 var fn = function () {
     return a + b;
